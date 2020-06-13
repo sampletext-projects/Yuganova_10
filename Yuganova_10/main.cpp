@@ -55,22 +55,20 @@ int main()
 	readData();
 
 	// посчитать стоимость каждого ланча
-	int* lunchCosts = new int[N];
+	int* lunchCosts = new int[N]{0};
 	cout << "\nСтоимости ланчей: \n";
 	for (int i = 0; i < N; i++)
 	{
-		lunchCosts[i] = 0;
 		for (int j = 0; j < Q; j++)
 			lunchCosts[i] += prices[i][j];
 		cout << lunchCosts[i] << " ";
 	}
 
 	// посчитать калорийность каждого ланча
-	int* lunchCals = new int[N];
+	int* lunchCals = new int[N]{0};
 	cout << "\nКалорийности ланчей: \n";
 	for (int i = 0; i < N; i++)
 	{
-		lunchCals[i] = 0;
 		for (int j = 0; j < Q; j++)
 			lunchCals[i] += calories[i][j];
 		cout << lunchCals[i] << " ";
